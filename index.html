@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>erprem</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .li:hover {
+            color: blue !important;
+            text-decoration: underline;
+        }
+
+        .btn1:hover {
+            background-color: blue;
+            color: white;
+            border: #0260ec;
+        }
+
+        .btn2:hover {
+            background-color: white !important;
+            color: blue !important;
+
+        }
+
+        #skill{
+            justify-content: center;
+            gap: 20px; 
+        }
+
+        #Project {
+        justify-content: center;
+        overflow: hidden;
+        align-items: center;
+        display: row;
+        gap: 20px; /* equal spacing between grid items */
+        }
+        .pbtn:hover{
+                background-color: blue;
+                color: white;
+                border-color: white !important;
+        }
+
+        #row{
+            display: flex;
+            gap: 20px;
+            border: 1px solid black;
+            border-radius: 50px;
+            box-sizing: border-box;  
+            display:inline-flex;
+            justify-content: center;
+            padding: 10px;
+            align-items: center;
+            
+        }
+
+        @media (max-width: 517px) {
+        #row {
+              flex-direction: column;
+              padding: 20px;
+              box-sizing: border-box;
+            }
+        }
+
+         @media (max-width: 517px) {
+        #lm {
+              padding-right:32px;
+            }
+        }
+       
+        
+        .mailsms:hover{
+            text-decoration: underline !important;
+            color: blue !important;
+            justify-content: center;
+        }
+
+        #items{
+            justify-content: center;
+            font-weight: bold;
+        }
+       
+              
+</style>
+</head>
+
+<body>
+<div class="container-fluid ">
+<!--Startmenu-->
+<nav class="navbar bg-primary fixed-top">
+            <div class=" bg-primary container-fluid">
+                <a class="navbar-brand text-white " href="#"><b><i>Welcome Portfolio</i></b> </a>
+                <button class="navbar-toggler bg-white" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title text-primary" id="offcanvasNavbarLabel">Software Engineer</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul onclick="hide()" class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active fs-5 li text-black " aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active fs-5 li text-black " href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active fs-5 li text-black " href="#about">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active fs-5 li text-black " href="#skills">Skills</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active fs-5 li text-black " href="#projects">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active fs-5 li text-black " href="#contactme">Contact</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                            </li>
+                        </ul>
+                    
+                    </div>
+                </div>
+            </div>
+</nav>
+<!--Endmenu-->
+
+<!--StartProfile-->
+<div class="row">
+            <div class="col-sm-12 col-lg-6 col-md-6 text-center pt-5 mt-5 ">
+                <h5 class="text-center text-muted">Hello, I'm</h5>
+                <h1>Er.Premchand</h1>
+                <p class="text-muted fs-3 ps-1">Software Engineer Specialized .NET Developer</p>
+                <button style="height: 45px;" class="border-1 border-black rounded-5 p-1 btn1"><b>Download CV</b>
+                </button>
+                <button style="height: 45px;"
+                    class=" border-1 border-primary text-bg-dark rounded-5 ms-4 btn2 p-1 "><b>Contact Info</b>
+                </button><br>
+                <a href="https://www.linkedin.com/in/prempage/" target="">
+                    <i class="fa-brands fa-linkedin text-center fs-2 mt-3 ms-3"></i>
+                </a>
+                <a href="https://github.com/premjirao">
+                    <i class="fa-brands fa-github text-center text-bg-dark fs-2 mt-3 ms-3"></i>
+                </a>
+        </div>
+        <div class="col-sm-12 col-lg-6 col-md-6 text-center py-5 ">
+            <img style="height: 300px; border-radius:80px;" class="img-fluid mx-auto mt-5 shadow-lg opacity-100"
+                src="images/portfolio.png" alt="premc_profile">
+        </div>  
+</div>
+<!--EndProfile-->
+
+<!--StartAbout-->
+<div class="row pt-5" id="about">
+            <h6 class="fs-5 text-muted text-center gy-5">Get to know more</h6>
+            <h1 class="text-center">About Me</h1>
+            <div class="col-sm-1"></div>
+            <div style=" background: linear-gradient(135deg, #f0b850, #f01cd4);" 
+                class="col-sm-3 me-5 border border-1 border-black rounded-4 pt-3 mt-3 text-center py-4 ">
+                <img  style="height: 270px; " class="img-fluid mx-auto mt-3 shadow-lg rounded-circle" src="images/rao.png"
+                    alt="premc_profile"/>
+            </div>
+         
+            <div class="col-sm-3 me-5 border border-1 border-black rounded-4 pt-3 mt-3">
+                <i class="fa-solid fa-graduation-cap fs-3"></i>
+                <h4>Education</h4>
+                <span style="text-align:justify; " class="text-muted">
+                 <span><b>Bachelor of computer applications</b> from MD College of Technology and Management Amarsanda Barabanki UP.</span>
+                <br>
+                 <span><b>Diploma in CSE</b> from Chhatrapati Shahu Ji Maharaj Government Polytechnic Ambedkar Nagar UP.</span>
+                 <br>
+                <span><b>Intermediate</b> from ASHS & GRS Inter College Basti UP.</span>
+            </div>
+           
+            <div class="col-sm-3 border border-1 border-black rounded-4  pt-3 mt-3 ">
+                <img style="height: 30px;" src="https://cdn-icons-png.flaticon.com/128/11497/11497859.png"
+                    alt="experiences" class="icon">
+                <h4>Experience</h4>
+                <span class=" text-muted text-start">
+                    <span><b>Internship</b> at <b>Techpile Technology Pvt.Ltd</b> Lucknow (Nov 2024-Present)
+                    </span><br />
+                    <span>Enthusiastic .NET Trainee with hands-on experience in developing web
+                        applications using C#, ASP.NET MVC, and SQL Server.</span><br />
+                    <span><b>Customer Support Associate</b> at <b>Niftel Communication</b> (Apr 2024- Sep 2024) Resolved issues related to billing, technical problems, and help them to deliver item on time, effectively guiding
+                    customers to solutions. </span>
+
+                </span>
+
+            </div>
+             <div class="col-sm-1"></div>
+</div>
+<!--EndAbout-->
+
+<!--StartSkills-->
+<div class="row" id="skills">
+    <div class="col-sm-12 gy-5 pt-5">
+        <h6 class="fs-5 text-muted text-center pt-3">Explore My</h6>
+        <h1 class="text-center">Skills</h1>
+    </div>
+
+</div>
+<div class="row" id="skill">
+            <div class="col-sm-5 border border-1 border-black rounded-5">
+                <div  class="row" style="width: fit-content; ">
+                    <h3 class="text-center">Fontend Development</h3>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span class="fs-5"><b>HTML</b></span>
+                        <p class="text-muted ms-3">(Experience)</p>
+                        <p></p>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span class="fs-5"><b>CSS</b></span>
+                        <p class="text-muted ms-3">(Experience)</p>
+                        <p></p>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span class="fs-5"><b>Bootstrap</b></span>
+                        <p class="text-muted ms-3">(Experience)</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span class="fs-5"><b>JavaScript</b></span>
+                        <p class="text-muted ms-3">(Experience)</p>
+                        <p></p>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span class="fs-5"><b>jQuery</b></span>
+                        <p class="text-muted ms-3">(Experience)</p>
+                        <p></p>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span class="fs-5"><b>Angular</b></span>
+                        <p class="text-muted ms-3">(Experience)</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-5 border border-1 border-black rounded-5">
+                <div class="row">
+                    <h3 class="text-center">Backend Development</h3>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span class="fs-5"><b>ASP.NET</b></span>
+                        <p class="text-muted ms-3">(Experience)</p>
+                        <p></p>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span class="fs-5"><b>C Sharp</b></span>
+                        <p class="text-muted ms-3">(Experience)</p>
+                        <p></p>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span class="fs-5"><b>MS SQL</b></span>
+                        <p class="text-muted ms-3">(Experience)</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span class="fs-5"><b>ADO.NET</b></span>
+                        <p class="text-muted ms-3">(Experience)</p>
+                        <p></p>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span class="fs-5"><b>.NET MVC</b></span>
+                        <p class="text-muted ms-3">(Experience)</p>
+                        <p></p>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span class="fs-5"><b>GIT</b></span>
+                        <p class="text-muted ms-3">(Experience)</p>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+</div>
+<!--EndSkills-->
+
+<!-- Project Start -->
+<div class="col-sm-12 gy-5 pt-5" id="projects">
+    <br /><br />
+    <h6 class="fs-5 text-muted text-center pt-3 ">Browse My Project Here!</h6>
+    <h1 class="text-center">Projects</h1>
+</div>
+ <div class="row " id="Project">
+   
+    <div style="overflow: hidden; justify-content: center; align-items: center;"
+        class="col-sm-3 pb-2  img-fluid border border-1 border-black rounded-5 ">
+        <img style="height: 280px; width: 340px;" src="images/p1.avif" alt="Project1">
+        <p>The project title and details about the project I will keep here for future upcoming projects that may develop through
+        experiences, so the purpose of this project section in the portfolio is to showcase the work and practical experiences
+        for the future.</p>
+      <a href="#gitprofile"><button class="btn-light border ms-5 me-5 border-black pbtn rounded-5 w-25">GitHub</button></a>
+        <button class="btn-light border border-black pbtn rounded-5 w-25">Demo</button>
+    </div>
+    <div style="overflow: hidden; justify-content: center; align-items: center;"
+        class="col-sm-3 pb-2 img-fluid border border-1 border-black rounded-5">
+        <img style="height: 280px; width: 340px;" src="images/p3.avif" alt="Project2">
+        <p>The project title and details about the project I will keep here for future upcoming projects that may develop through
+        experiences, so the purpose of this project section in the portfolio is to showcase the work and practical experiences
+        for the future.</p>
+        <a href="#gitprofile"><button class="btn-light border ms-5 me-5 border-black pbtn rounded-5 w-25">GitHub</button></a>
+        <button class="btn-light border border-black pbtn rounded-5 w-25">Demo</button>
+    </div>
+    <div style="overflow: hidden; justify-content: center; align-items: center;"
+        class="col-sm-3 pb-2 img-fluid  border border-1 border-black rounded-5">
+        <img style="height: 280px; width: 340px;" src="images/p4.jpg" alt="Project3">
+        <p>The project title and details about the project I will keep here for future upcoming projects that may develop through
+        experiences, so the purpose of this project section in the portfolio is to showcase the work and practical experiences
+        for the future.</p>
+        <a href="#gitprofile"><button class="btn-light border ms-5 me-5 border-black pbtn rounded-5 w-25">GitHub</button></a>
+        <button class="btn-light border border-black pbtn rounded-5 w-25">Demo</button>
+    </div>
+  
+</div>
+<!-- Project End -->
+
+<!--Contact Start-->
+<div class="col-sm-12 gy-5 pt-5" id="contactme">
+    <br /><br />
+    <h6 class="fs-5 text-muted text-center pt-3 ">Get In Touch</h6>
+    <h1 class="text-center">Contact Me</h1>
+</div>
+<div class="container">  
+   <center>
+    <div id="row">
+        <div>
+            <img style="height: 40px; width: 40px; " src="https://cdn-icons-png.flaticon.com/512/3178/3178158.png"
+                alt="Email icon" class="icon contact-icon">
+            <a style="text-decoration: none; color: black;" class="text-muted fs-5 mailsms" 
+            href="mailto:premchand.raodev@gmail.com">Send Your Message</a>
+        </div>
+        <div>
+            <img style="height: 40px; width: 40px; " src="https://cdn-icons-png.flaticon.com/128/145/145807.png"
+                alt="Linkedin icon" class="icon contact-icon">
+            <a style="text-decoration: none; color: black; " id="lm" class="text-muted fs-5 mailsms" 
+            href="www.linkedin.com/in/prempage">Linkedin Profile</a>
+        </div>
+    </div>
+   </center>
+</div>
+<!-- Contact End -->
+
+<!-- Footer Start -->
+<br /><br />
+<br /><br />
+ <footer>
+    <div class="row" style="background-color:#0260ec;">
+
+        <nav class="nav" id="items">
+            <a class="nav-link text-white fs-4" href="#about">About</a>
+            <a class="nav-link text-white fs-4" href="#skill">Skills</a>
+            <a class="nav-link text-white fs-4" href="#Project">Project</a>
+            <a class="nav-link text-white fs-4" href="#contactme">Contact</a>
+        </nav>
+        <br/>
+        <br/><br />
+        <p class="text-center text-white">Copyright &#169; 2025 Premchand.  All Rights Reserved!!</p>
+
+  
+    </div>
+ </footer>
+<!-- Footer End -->
+   
+    <script src="Js/bootstrap.bundle.js">
+        function toggleMenu() {
+            const menu = document.querySelector(".menu-link")
+            const icon = document.querySelector(".hamburger-icon")
+            menu.classList.toggle("open")
+            icon.classList.toggle("open")
+        }
+       
+        function hide(){
+            let value = document.querySelector(".navbar-nav").value()
+            value.style.display = 'none'
+            
+        }
+
+      
+    </script>
+</body>
+
+</html>
